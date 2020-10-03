@@ -1,16 +1,13 @@
 # 熱門餐廳網
 
-使用 Node.js + Express 打造的餐廳美食搜索網站，再加上搜尋餐廳資料等功能。
+使用 Node.js + Express.js 加亂數應用，利用現有資料來做幹話產生器。
 
 ## 畫面截圖
-![首頁](https://upload.cc/i1/2020/10/01/HeuYF1.png)
-
+![應用畫面](screenshot.png)
 ## Features - 產品功能
 
-1. 使用者可以點擊任一餐廳，查看更多餐廳資訊，如地址、電話與簡介
-2. 使用者可以瀏覽一家餐廳的詳細資訊
-3. 使用者可以依照中文名稱、英文名稱與餐廳類別進行搜尋
-4. 使用者可以瀏覽全部所有餐廳
+1. 使用者可以點擊任意角色，產生幹話句子
+2. 使用者可以利用句子增加自己的幽默感與同事拉近距離
 
 ## Environment SetUp - 環境建置
 
@@ -24,31 +21,31 @@
 1. 在terminal，Clone此專案至本機電腦中專案資料夾
 
 ```
-git clone：https://github.com/pierceshih15/restaurantList.git
+git clone：https://github.com/hooty868/Surprising_generator.git
 ```
 
 2. 開啟終端機(Terminal)，進入存放此專案的資料夾
 
 ```
-cd restaurantList
+cd Surprising_generator
 ```
 
 3. 安裝 npm 套件
 
 ```
-在 Terminal 輸入 npm install 指令
+npm init -y
 ```
 
 4. 安裝 nodemon 套件
 
 ```
-在 Terminal 輸入 nodemon app.js 指令
+npm install express express-handlebars
 ```
 
 5. 透過nodemon啟動專案
 
 ```
-npm run dev
+nodemon app.js
 ```
 
 6. 開啟遊覽器，並收尋本地頁面
