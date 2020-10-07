@@ -8,6 +8,7 @@
     </div>
   </div>
   <form method="POST" action="/">
+
     <div class="row justify-content-center" id="title" style="height: 400px;">
       <div class="col-4 mh-100 align-self-center" style="height: 400px;">
         <div class="row" style="height: 300px;">
@@ -19,15 +20,13 @@
           <div class="form-group form-row mb-2 align-items-center">
             <div class="col-md-12">
               <div class="custom-control custom-checkbox">
-                <input type="radio" class="form-check-input" id="developer" name="developer"
-                  {{#if options.developer}}{{/if}}>
+                <input type="radio" class="form-check-input" id="developer" name="target" value="developer">
                 <h3>
                   <label class="target-name" for="developer">工程師</label>
                 </h3>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -41,8 +40,7 @@
           <div class="form-group form-row align-items-center">
             <div class="col-md-12">
               <div class="custom-control custom-checkbox">
-                <input type="radio" class="form-check-input" id="designer" name="designer"
-                  {{#if options.designer}}{{/if}}>
+                <input type="radio" class="form-check-input" id="designer" name="target" value="designer">
                 <h3>
                   <label class="target-name" for="designer">設計師</label>
                 </h3>
@@ -61,9 +59,11 @@
         <div class="row justify-content-center" style="height: 100px;">
           <div class="form-group form-row align-items-center">
             <div class="col-md-12">
-              <div class="custom-control custom-checkbox">
-                <input type="radio" class="form-check-input" id="founder" name="founder" {{#if options.founder}}{{/if}}>
-                <h3><label class="target-name" for="founder">創業家</label></h3>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="form-check-input" id="founder" name="target" value="founder">
+                <h3>
+                  <label class="target-name" for="founder">創業家</label>
+                </h3>
               </div>
             </div>
           </div>
@@ -72,12 +72,12 @@
 
     </div>
 
-    <div class="row justify-content-center" id="title" style="height:200px;"
-      id="result">
+    <div class="row justify-content-center" id="title" style="height:200px;" id="result">
       <button class="btn btn-secondary" type="submit" style="height:50px;">產生幹話</button>
       <div class=" col-10 mh-100 align-self-center border border-dark" style="height: 200px;">
         <h2>{{sentence}}</h2>
       </div>
     </div>
+
   </form>
 </div>

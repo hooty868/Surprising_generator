@@ -1,4 +1,4 @@
-//include package and define server related variables
+// include package and define server related variables
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
@@ -15,14 +15,14 @@ const task = {
 }
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-//setting template engine
+// setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 // setting body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 
-//setting routes
+// setting routes
 app.get('/', (req, res) => {
   res.render('index')
 })
@@ -30,10 +30,10 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const options = req.body
   const sentence = generateSentence(options, task, phrase)
-  res.render('index', { options: options, sentence: sentence })
+  res.render('index', { options, sentence })
 })
 
-//starts the express server and listening for connections
+// starts the express server and listening for connections
 app.listen(port, () => {
   console.log(`Express app listening on port ${port}.`)
 })
